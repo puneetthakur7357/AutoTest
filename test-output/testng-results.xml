@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="34154" started-at="2017-07-04T01:42:32Z" finished-at="2017-07-04T01:43:06Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="34154" started-at="2017-07-04T01:42:32Z" finished-at="2017-07-04T01:43:06Z">
+      <class name="Automation.AppTest">
+        <test-method status="PASS" signature="setupBrowser()[pri:0, instance:Automation.AppTest@53b32d7]" name="setupBrowser" is-config="true" duration-ms="11586" started-at="2017-07-03T21:42:32Z" finished-at="2017-07-03T21:42:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method status="PASS" signature="pagetitle()[pri:1, instance:Automation.AppTest@53b32d7]" name="pagetitle" duration-ms="39" started-at="2017-07-03T21:42:43Z" description="This is test case for page title" finished-at="2017-07-03T21:42:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pagetitle -->
+        <test-method status="PASS" signature="login()[pri:2, instance:Automation.AppTest@53b32d7]" name="login" duration-ms="21666" started-at="2017-07-03T21:42:43Z" description="This is test case for login" finished-at="2017-07-03T21:43:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:Automation.AppTest@53b32d7]" name="logout" is-config="true" duration-ms="832" started-at="2017-07-03T21:43:05Z" finished-at="2017-07-03T21:43:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- Automation.AppTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
