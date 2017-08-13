@@ -2,10 +2,13 @@ package Automation;
 
 import static org.testng.Assert.assertEquals;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
-
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -27,6 +30,7 @@ public class AppTest {
 		driver.get(urlname);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 	}
 	
 	
@@ -86,10 +90,30 @@ public class AppTest {
 		else{
 			System.out.println("Test Failed!");
 		}
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 	}
 	
+	public static String getRandomString(int length) {
+		StringBuilder sb = new StringBuilder();
+		String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+		for (int i = 0; i < length; i++) {
+			int index = (int) (Math.random() * characters.length());
+			sb.append(characters.charAt(index));
+		}
+		return sb.toString();
+	}
+	
+	
 		@AfterClass
-		public void logout(){
+		public void tearDown() throws Exception {
+			
+			String fileName = getRandomString(10) + ".png";
+			
+			File sourceFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(sourceFile, new File("C:\\project\\project\\Screenshot\\" + fileName));
+		
+	
 			System.out.println("Running LOGOUT");
 			
 			driver.findElement(By.xpath(".//*[@id='settingsBox']/ul/li[3]/a")).click();

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Automation.AppTest]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="Automation.AppTest">
+        <methods>
+          <include name="pagetitle"/>
+          <include name="login"/>
+          <include name="tearDown"/>
+          <include name="setupBrowser"/>
+        </methods>
+      </class> <!-- Automation.AppTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Automation.AppTest] -->
